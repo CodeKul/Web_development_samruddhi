@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <h2 style="color: red; text-align: center">Time Table</h2>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 12px;
+        text-align: center;
+      }
+
+      th,
+      td {
+        background-color: #b6a7a7;
+      }
+      th:hover{
+        background-color: blueviolet;
+      }
+      td:hover{
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th colspan="2">Monday</th>
+          <th colspan="2">Tuesday</th>
+          <th colspan="2">Wednesday</th>
+          <th colspan="2">Thursday</th>
+          <th colspan="2">Friday</th>
+        </tr> 
+        <tr>
+          <th>Time</th>
+          <th>Subject</th>
+          <th>Subject</th>
+          <th>Subject</th>
+          <th>Subject</th>
+          <th>Subject</th>
+          <th>Subject</th>
+          <th>Subject</th>
+          <th>Subject</th>
+          <th>Subject</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">8:00 - 9:00</td>
+          <td rowspan="2">Math</td>
+          <td rowspan="2">English</td>
+          <td rowspan="2">Physics</td>
+          <td rowspan="2">Chemistry</td>
+          <td rowspan="2">Biology</td>
+          <td rowspan="2">History</td>
+          <td rowspan="2">Geography</td>
+          <td rowspan="2">Computer Science</td>
+          <td rowspan="2">Physical Education</td>
+        </tr>   
+
+        <tr>
+          <td rowspan="3">9:00 - 10:30</td>
+          <td>Spanish</td>
+          <td rowspan="2">Art</td>
+          <td rowspan="3">Chemistry Lab</td>
+          <td>Math</td>
+          <td rowspan="3">Physics Lab</td>
+          <td>English</td>
+          <td rowspan="2">Computer Lab</td>
+          <td rowspan="3">Biology Lab</td>
+          <td>History</td>
+        </tr>
+        <tr>
+          <td>Spanish Lab</td>
+          <td>Math</td>
+          <td>English</td>
+          <td>History</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

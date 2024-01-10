@@ -1,0 +1,146 @@
+<html>
+  <head>
+    <title>All Input Types and Attributes</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: scroll;
+        height: 175vh;
+      }
+      form {
+        background-color: #fff;
+        border-radius: 8px;
+        border: 1px solid black;
+        width: 100%;
+        margin-left: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        background-color: #97ad97;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #02ff0e;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h2 style="text-align: center; color: red; border: 1px solid black">
+        Contact Form
+      </h2>
+      <label for="text">UserName:</label>
+      <input
+        type="text"
+        id="text"
+        name="text"
+        placeholder="Enter text"
+        required
+        maxlength="5"
+      />
+
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter password"
+        required
+        minlength="8"
+        maxlength="20"
+      />
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter email"
+        required
+      />
+      <label for="url">Github URL:</label>
+      <input type="url" id="url" name="url" placeholder="Enter URL" required />
+      <label for="number">Mobile.No:</label>
+      <input
+        type="number"
+        id="number"
+        name="number"
+        placeholder="Enter number"
+        required
+        min="1"
+        max="100"
+      />
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="checkbox">Checkbox:</label>
+      <input type="checkbox" id="checkbox" name="checkbox" checked disabled />
+
+      <label for="radio">Radio:</label>
+      <input type="radio" id="radio1" name="radio" value="option1"  />female
+      <input type="radio" id="radio2" name="radio" value="option2" checked />male
+
+      <label for="color">Color:</label>
+      <input type="color" id="color" name="color" value="#ff0000" />
+
+      <label for="range">Range:</label>
+      <input type="range" id="range" name="range" />
+
+      <label for="file">File:</label>
+      <input type="file" id="file" name="file" />
+
+      <label for="datetime-local">Datetime Local:</label>
+      <input type="date" id="datetime-local" name="datetime-local" />
+
+      <label for="month">Month:</label>
+      <input type="month" id="month" name="month" />
+
+      <label for="week">Week:</label>
+      <input type="week" id="week" name="week" />
+
+      <label for="tel">Tel:</label>
+      <input
+        type="tel"
+        id="tel"
+        name="tel"
+        placeholder="Enter telephone number"
+      />
+
+      <label for="search">Search:</label>&emsp;&nbsp;
+      <input type="search" id="search" name="search" placeholder="Search" />
+
+      <label for="textarea">Textarea:</label>
+      <textarea
+        id="textarea"
+        name="textarea"
+        placeholder="Enter text"
+      ></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

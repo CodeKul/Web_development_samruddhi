@@ -1,0 +1,12 @@
+#heading{
+    color: red;
+    background-color: aqua;
+}
+.paragraph{
+    background-color: rgb(205, 211, 211);
+}
+#box{
+    border: 1px solid black;
+    margin-top: 10%;
+    padding-top: 10%;
+ }

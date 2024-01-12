@@ -1,0 +1,11 @@
+
+#paragraph{
+    color: rgb(175, 34, 9);
+}
+.head{
+    background-color:rgb(126, 136, 136);
+}
+*{
+    color: red;
+    background-color: aqua;
+}

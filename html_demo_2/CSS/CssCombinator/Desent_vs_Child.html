@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <!--The descendant combinator matches a child, grandchild, and so on. 
+        The child combinator selects elements that are direct children of another element. -->
+    <title>Descendent Selector Vs Child Selector</title>
+
+    <style type="text/css">
+      div a {
+        color: red;
+      }
+
+      /* div > a {
+        color: red;
+      } */
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <a href="#">This is Red</a>
+      <a href="#">This is Red</a>
+
+      <p>
+        <a href="#">This is Red</a>
+
+        <div>
+          <a href="#">This is Red</a>
+        </div>
+        
+      </p>
+
+      <span>Text inside the span tag.</span>
+    </div>
+  </body>
+</html>

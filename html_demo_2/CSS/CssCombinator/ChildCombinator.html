@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <!-- Child selector are used to pin point the location of the HTML tag in the nested HTML sections.
+    ">" greater than symbol is used to point the location of the HTML tag. -->
+    <title>Child Selector</title>
+
+    <style type="text/css">
+      p > a {
+        color: rgb(226, 153, 153);
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>
+      <a href="#">This is Red link inside paragraph tag.</a>
+        <div>
+            This is div inside paragraph tag.
+        </div>
+    </p>
+
+    <div>
+      <a href="#">This is the default color of the link.</a>
+    </div>
+  </body>
+</html>

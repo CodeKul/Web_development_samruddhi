@@ -1,0 +1,25 @@
+<!-- A CSS pseudo-element is used to style specified parts of an element.
+Style the first letter, or line, of an element
+Insert content before, or after, the content of an element -->
+<html>
+  <head>
+    <style>
+      p::first-line {
+        color: #ff0000;
+        font-variant: small-caps;
+      }
+      p::first-letter{
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      In Android and iOS development, a view is the basic building block of UI:
+      a small rectangular element on the screen which can be used to display
+      text, images, or respond to user input. Even the smallest visual elements
+      of an app, like a line of text or a button, are kinds of views. Some kinds
+      of views can contain other views. It’s views all the way down!
+    </p>
+  </body>
+</html>

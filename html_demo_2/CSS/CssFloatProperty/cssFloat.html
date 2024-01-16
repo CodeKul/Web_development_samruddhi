@@ -1,0 +1,45 @@
+<!-- 
+The CSS float property is used to specify whether an element should be floated to the left or right, 
+allowing text and inline elements to wrap around it. 
+It is commonly used for creating layouts where elements are positioned side by side. -->
+
+<!-- The float property can take the following values:
+
+left: The element floats to the left, and text and inline elements wrap around its right side.
+right: The element floats to the right, and text and inline elements wrap around its left side.
+none: The default value. The element does not float, and text and inline elements will not wrap around it.
+inherit: The element inherits the float value from its parent -->
+
+<html>
+<head>
+ 
+  <title>Float Property</title>
+  <style>
+    .container {
+      border: 1px solid #ccc;
+      overflow: auto; 
+    }
+
+    .left {
+      float: left;
+      width: 150px;
+      margin-right: 10px;
+      background-color: #f0f0f0;
+    }
+
+    .right {
+      float: right;
+      width: 150px;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left">Left Content</div>
+    <div class="right">Right Content</div>
+  </div>
+
+</body>
+</html>

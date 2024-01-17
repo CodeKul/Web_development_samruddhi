@@ -1,0 +1,41 @@
+
+<!-- The overflow property in CSS is used to control what happens when content overflows its box.
+ It specifies how the content should behave if it's larger than the box it's in. 
+The overflow property can be applied to block containers, inline blocks, and inline tables. --> 
+
+<html>
+<head>
+  <style>
+    .container {
+      width:200px;
+      height:200px;
+      border: 1px solid #ccc;
+      overflow:auto; 
+    }
+
+    .content {
+      width: 300px;
+      height: 150px;
+      background-color: #f0f0f0;
+      padding: 10px;
+    }
+  </style>
+  <title>Overflow Property Example</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="content">
+      <h2>Overflow Property Example</h2>
+      <p>
+        The .container has a fixed width and height, and the .content inside it is larger. 
+        The overflow: auto; property is set, so a scrollbar will appear in the .container 
+        when the content exceeds its dimensions. 
+        You can experiment with different values for the overflow property 
+        (such as hidden, scroll, or visible) to see how they affect the display of the content.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

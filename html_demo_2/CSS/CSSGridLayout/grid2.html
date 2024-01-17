@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background-color: #e0e0e0;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3,1fr );
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .grid-item {
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: rgb(22, 21, 21);
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .inner-box {
+      width: 80%;
+      height: 80%;
+      background-color: rgba(228, 199, 199, 0.9);
+      border: 1px solid #3498db;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      border-radius: 8px;
+    }
+
+    .item-1 { background-color: #3498db; }
+    .item-2 { background-color: #e74c3c; }
+    .item-3 { background-color: #2ecc71; }
+    .item-4 { background-color: #f39c12; }
+    .item-5 { background-color: #9b59b6; }
+    .item-6 { background-color: #1abc9c; }
+  </style>
+  <title>Nested Grid Example</title>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="grid-item item-1">
+      <div class="inner-box">Box 1</div>
+    </div>
+    <div class="grid-item item-2">
+      <div class="inner-box">Box 2</div>
+    </div>
+    <div class="grid-item item-3">
+      <div class="inner-box">Box 3</div>
+    </div>
+    <div class="grid-item item-4">
+      <div class="inner-box">Box 4</div>
+    </div>
+    <div class="grid-item item-5">
+      <div class="inner-box">Box 5</div>
+    </div>
+    <div class="grid-item item-6">
+      <div class="inner-box">Box 6</div>
+    </div>
+  </div>
+
+</body>
+</html>

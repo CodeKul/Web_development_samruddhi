@@ -1,0 +1,36 @@
+ <!-- The z-index property in CSS is used to control the stacking order of positioned elements. 
+ It determines the order in which elements appear on the z-axis, with higher values appearing 
+ in front of elements with lower values. 
+ The z-index property only works on positioned elements
+ (elements with a position value other than static). 
+ 
+ Positioned Elements: The z-index property works on elements that have a position value other than static.
+  Common values include relative, absolute, and fixed.
+-->
+<html>
+<head>
+  <title>Z-Index Example</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      position: relative;
+    }
+
+    .box.red {
+      background-color: red;
+      z-index:1;
+    }
+
+    .box.blue {
+      background-color: blue;
+      z-index:2;
+      left: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box red"></div>
+  <div class="box blue"></div>
+</body>
+</html>

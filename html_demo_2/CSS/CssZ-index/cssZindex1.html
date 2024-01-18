@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>Negative Z-Index Example</title>
+  <style>
+    .container {
+      position: relative;
+    }
+    
+    .image {
+      width:500px;
+      height:300px;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div style="color: antiquewhite;">Because the image has a z-index of -1, it will be placed behind the text</div>
+    <img class="image" src="./abstract-black-textured-background-with-scratches_130265-12474.avif" alt="Background Image">
+  </div>
+</body>
+</html>

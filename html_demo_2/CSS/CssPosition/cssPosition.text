@@ -1,0 +1,29 @@
+
+ In CSS, the position property is used to specify the positioning method for an element. 
+ The position property can take several values, each affecting the element's layout and its 
+ relationship to the surrounding elements.
+ Here are the main values for the position property:
+
+ 1.Static :
+  This is the default value. Elements with position: static; are positioned according to 
+  the normal flow of the document. The top, right, bottom, and left properties have no effect.
+
+2.Relative:
+A relatively positioned element is positioned relative to its normal position in the document flow. 
+The top, right, bottom, and left properties can be used to adjust its position.
+
+3.Absolute:
+ An absolutely positioned element is positioned relative to its nearest positioned ancestor 
+ (instead of positioned relative to the viewport, like fixed). If there is no positioned ancestor, 
+  it uses the document body. 
+ The top, right, bottom, and left properties can be used to specify the position.
+ 
+4.Fixed :
+A fixed positioned element is positioned relative to the viewport (the browser window). 
+It stays fixed in place even if the page is scrolled. 
+The top, right, bottom, and left properties can be used to specify the position.
+
+5.Sticky :
+An element with position: sticky; is positioned based on the user's scroll position. 
+It acts like relative positioned until it crosses a specified point, 
+then it is treated as fixed

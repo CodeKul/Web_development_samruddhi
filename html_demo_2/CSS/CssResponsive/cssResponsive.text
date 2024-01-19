@@ -1,0 +1,9 @@
+Media Queries :
+Are part of CSS and are used for responsive design by adjusting styles based on the viewport 
+characteristics.
+Bootstrap :
+Is a comprehensive front-end framework that provides pre-designed components and a 
+responsive grid system.
+Tailwind CSS :
+Is a utility-first CSS framework that focuses on providing low-level 
+utility classes for building custom designs without writing custom CSS

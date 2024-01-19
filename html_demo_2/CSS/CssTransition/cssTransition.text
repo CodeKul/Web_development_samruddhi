@@ -1,0 +1,14 @@
+ CSS transitions are a way to create smooth animations or changes in property values over a 
+ specified duration. Transitions are applied to elements when their state changes,
+ such as when they are hovered over, focused, or in response to other events
+
+ Properties Of CSS Transition
+ 
+ transition-property:Specifies the name or names of the CSS properties to which a transition effect should be applied.
+ transition-duration: Specifies the duration of the transition.
+ transition-timing-function: Specifies the timing function to use for the transition.
+ transition-delay: Specifies a delay before the transition will start.
+ transform:Applies a 2D or 3D transformation to an element. It's often used in conjunction
+ with transitions to create effects like scaling, rotating, and translating.
+
+ 

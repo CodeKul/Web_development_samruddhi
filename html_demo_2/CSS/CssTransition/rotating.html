@@ -1,0 +1,36 @@
+<html>
+<head>
+
+  <style>
+    .outer-box {
+      width: 200px;
+      height: 200px;
+      background-color: #3498db;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 1s ease-in-out;
+    }
+
+    .inner-box {
+      width: 100px;
+      height: 100px;
+      background-color: #2ecc71;
+      transition: transform 1s ease-in-out;
+    }
+
+    .outer-box:hover {
+      transform: rotate(360deg);
+    }
+
+    .inner-box:hover {
+      transform: rotate(-360deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="outer-box">
+    <div class="inner-box"></div>
+  </div>
+</body>
+</html>

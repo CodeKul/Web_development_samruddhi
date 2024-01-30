@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title>Document</title>
+</head>
+  <body>
+    <!-- What is JS? -->
+     <p>"JS" commonly refers to JavaScript. JavaScript is a high-level, interpreted programming language 
+that is primarily known for its use in web development. It allows developers to add interactivity, 
+manipulate the Document Object Model (DOM), and create dynamic content on websites.</p>
+
+<!--What is dom? -->
+
+<p>The Document Object Model, or DOM, is like a tree structure that represents the elements of a web page. 
+    Each element (like paragraphs, images, buttons) is a part of this tree. It allows programmers to 
+    interact with and manipulate the content and structure of a webpage using languages like JavaScript.
+    
+     Imagine your web page as a family tree. The main document is like the root of the tree,
+     and each HTML element (like headings, paragraphs, images) is a branch. 
+     The DOM is a way for your code to navigate, modify, and add new branches to this tree. 
+     This interaction with the tree allows you to change what users see on a webpage dynamically. 
+     If you click a button and the webpage updates without reloading, 
+     it's likely because JavaScript is using the DOM to make those changes in real-time.</p>
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Styled Button</title>
+    </head>
+    <body>
+    
+    <!-- HTML content with a styled button and a paragraph -->
+    <button id="changeTextButton" style="background-color:rgb(115, 135, 138); color: white; padding: 10px 20px; font-size: 16px; cursor: pointer;">
+        Click me!
+    </button>
+    <p id="demo" style="color: rgb(81, 190, 18);">I will change when you click the button.</p>
+    
+    <script>
+        // JavaScript code to interact with the DOM
+        var button = document.getElementById("changeTextButton");
+        var paragraph = document.getElementById("demo");
+    
+            button.addEventListener("click", function() {
+            paragraph.innerHTML = "Text changed! DOM is awesome!";
+            // Change the color of the paragraph text to red when the button is clicked
+            paragraph.style.color = "red";
+        });
+    </script>
+    </body>
+    </html>
+    
+
+<!-- What is the application of javascript programming language ? -->
+1.Web Development:
+Client-Side Scripting:
+JavaScript is mainly used to enhance the interactivity and responsiveness of websites by 
+enabling client-side scripting. 
+It allows developers to create dynamic and interactive user interfaces.
+Frameworks and Libraries: JavaScript has a rich ecosystem of frameworks and libraries, 
+such as React, Angular, and Vue.js, which are widely used for building modern, 
+single-page web applications.
+
+2.Server-Side Development:
+With the advent of technologies like Node.js, JavaScript can now be used for 
+server-side development as well.
+Node.js allows developers to use JavaScript on the server, 
+enabling full-stack development with a single language.
+
+3.Mobile App Development:
+JavaScript, in combination with frameworks like React Native and Ionic, 
+is used for building cross-platform mobile applications. 
+This allows developers to write code once and deploy it on multiple platforms, 
+such as iOS and Android.
+
+
+What is node.js ?
+Node.js is a runtime environment that allows the execution of JavaScript code server-side. 
+It is built on the V8 JavaScript runtime engine, which is the same engine that powers the 
+Google Chrome browser. 
+Node.js enables developers to use JavaScript for server-side scripting, 
+allowing them to create dynamic web content and build scalable network applications.
+
+Difference between TypeScript and JavaScript
+TypeScript is an open-source language to build large-scale web apps, whereas 
+JavaScript is a server-side programming language that helps to develop interactive web pages.
+
+
+Current Version Of JS 
+(ES12)
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <p id="array"></p>
+  </head>
+  <script>
+
+    const employee = { firstName: "Jhon", lastName: "Doe", age: "20" };
+    document.getElementById("array").innerHTML = employee.age;
+    console.log(employee);
+
+
+
+
+    const vehicles = ["car","van","auto"];
+    document.getElementById("array").innerHTML = vehicles[vehicles.length - 1];
+
+
+
+    let list = ["sugar", "tea", "coffee", "butter"];
+    let size = list.length;
+    document.getElementById("array").innerHTML = size;
+    console.log(list)
+
+
+
+    const employees = [
+      { firstName: "John", lastName: "Doe", age: 30 },
+      { firstName: "Jane", lastName: "Smith", age: 25 },
+      { firstName: "Bob", lastName: "Johnson", age: 35 },
+    ];
+    document.getElementById("array").innerHTML = employees[0].lastName;
+    console.table(employees);
+    console.log(employees);
+
+   
+  </script>
+</html>
+

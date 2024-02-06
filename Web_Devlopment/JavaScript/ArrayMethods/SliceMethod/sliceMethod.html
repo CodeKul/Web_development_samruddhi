@@ -1,0 +1,52 @@
+<html>
+<head>
+ 
+  <title>Slice Method Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Slice Method Example</h1>
+
+  <div>
+    <p>Original Array:</p>
+    <p id="original-array-display"></p>
+  </div>
+
+  <div>
+    <p>Extracted Array:</p>
+    <p id="extracted-array-display"></p>
+  </div>
+
+  <button onclick="extractArray()">Extract Array</button>
+
+  <script>
+
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+   
+    function extractArray() {
+      const start = parseInt(prompt('Enter the start index:'));
+      const end = parseInt(prompt('Enter the end index:'));
+
+      const extractedArray = numbers.slice(start, end);
+
+      displayArray('original-array-display', 'Original Array:', numbers);
+      displayArray('extracted-array-display', 'Extracted Array:', extractedArray);
+    }
+
+  
+    function displayArray(elementId, label, array) {
+      const arrayDisplay = document.getElementById(elementId);
+      arrayDisplay.innerHTML = `<strong>${label}</strong><br>${array.join(', ')}`;
+    }
+  </script>
+
+</body>
+</html>

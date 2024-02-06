@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+        <p id="shift"></p>
+        <button onclick="removeFirst()">remove</button>
+        <script>
+            let vehicles = ["car","bus","van","auto","bike","cycle"]
+            function removeFirst(){
+                vehicles.shift()
+                displayArray()
+            }
+            function displayArray(){
+                const arrayDisplay =  document.getElementById("shift");
+                arrayDisplay.textContent = vehicles.join(',')
+            }
+            displayArray()
+        </script>
+</body>
+</html>

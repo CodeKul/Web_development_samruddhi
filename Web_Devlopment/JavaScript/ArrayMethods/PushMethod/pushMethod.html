@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <!-- prompt is a method in JavaScript that displays a dialog box containing a message
+ and an input field. It is often used to interact with the user by requesting input. 
+ The user can enter data into the input field, and the value entered by the user can then
+ be captured and used in the script. -->
+    <!-- 
+ The textContent property in JavaScript is used to get or set the text content of an HTML element. 
+ It represents the text within the element,
+ excluding any HTML tags that may be present -->
+  </head>
+  <body>
+    <h5>push Method</h5>
+    <p id="array-display"></p>
+    <button onclick="addElement()">ADD</button>
+    <script>
+      let array = [1, 2, 3, 4, 5];
+      function addElement() {
+        const newElement = prompt("enter new element");
+        array.push(newElement);
+  
+
+        displayArray();
+      }
+      function displayArray() {
+        const arrayDisplay = document.getElementById("array-display");
+        arrayDisplay.textContent = array.join(",");
+        
+      }
+      displayArray();
+    </script>
+  </body>
+</html>

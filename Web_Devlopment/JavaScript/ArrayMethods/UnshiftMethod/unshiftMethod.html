@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="unshift"></p>
+    <button onclick="addNew()">ADD</button>
+    <script>
+      let users = ["user1", "user2", "user3"];
+      function addNew() {
+        const newUsers = prompt("Enter the new user");
+        users.unshift(newUsers);
+
+        displayArray();
+      }
+
+      function displayArray() {
+        const arrayDisplay = document.getElementById("unshift");
+        arrayDisplay.textContent = users.join(",");
+      }
+      displayArray();
+    </script>
+  </body>
+</html>

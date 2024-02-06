@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+    <h2>pop Method</h2>
+    <p id="pop"></p>
+    <button onclick="removelast()">Remove</button>
+    <script>
+      let colors = ["red","blue","green","purple","black","white"]
+      function removelast(){
+        colors.pop()
+
+        displayArray();
+      }
+      function displayArray(){
+        const array = document.getElementById('pop')
+        array.textContent = colors.join(',')
+      }
+
+      displayArray()
+    </script>
+</body>
+</html>

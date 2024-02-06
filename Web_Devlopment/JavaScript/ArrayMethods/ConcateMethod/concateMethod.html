@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Concat Method Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>Concat Method Example</h4>
+    <div>
+      <p>Array 1:</p>
+      <pre id="array1-display"></pre>
+    </div>
+
+    <div>
+      <p>Array 2:</p>
+      <pre id="array2-display"></pre>
+    </div>
+
+    <button onclick="combineArrays()">Combine Arrays</button>
+
+    <script>
+      let array1 = [1, 2, 3];
+      let array2 = ["a", "b", "c"];
+
+      function combineArrays() {
+        const combinedArray = array1.concat(array2);
+        displayArray("array1-display", "Array 1:", array1);
+        displayArray("array2-display", "Array 2:", array2); 
+        displayArray("array1-display", "Combined Array:", combinedArray);
+        
+      }
+
+      function displayArray(elementId, label, array) {
+        const arrayDisplay = document.getElementById(elementId);
+        arrayDisplay.innerHTML = `<strong>${label}</strong><br>${array.join(
+          ", "
+        )}`;
+      }
+    </script>
+  </body>
+</html>

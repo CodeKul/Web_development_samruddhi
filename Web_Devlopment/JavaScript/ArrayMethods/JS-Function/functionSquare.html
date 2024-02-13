@@ -1,0 +1,29 @@
+<html>
+<head> 
+  <title>Simple Function Program</title>
+</head>
+<body>
+
+  <script>
+    function calculateSquare(number) {
+      return number * number;
+    }
+
+      function userForSquare() {
+    
+      let userNumber = prompt("Enter a number:");
+      userNumber= (userNumber);
+
+      if (!isNaN(userNumber)) {
+       
+        let square = calculateSquare(userNumber);
+        alert("The square of " + userNumber + " is: " + square);
+      }
+    }
+    
+    
+    userForSquare();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function operateOnNumbers(x, y, operation) {
+        return operation(x, y);
+      }
+
+      const subtract = (a, b) => a - b;
+
+      let result = operateOnNumbers(10, 5, subtract);
+      console.log("Result:", result);
+    </script>
+  </body>
+</html>

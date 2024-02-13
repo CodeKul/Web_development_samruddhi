@@ -1,0 +1,32 @@
+<html>
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+    <p id="array-display"></p>
+    <button onclick="findIndexOf()">findIndexOf</button>
+    <script>
+          let colors = ['Red', 'Green', 'Blue', 'Yellow', 'Green'];
+         function findIndexOf() {
+        const colorToFind = prompt('Enter a color to find:');
+        const index = colors.indexOf(colorToFind);
+
+      if (index !== -1) {
+        alert(`${colorToFind} found at index ${index}`);
+      } else {
+        alert(`${colorToFind} not found in the array`);
+      }
+
+      
+      displayArray('array-display', 'Colors:', colors);
+    }
+
+ 
+    function displayArray(elementId, label, array) {
+      const arrayDisplay = document.getElementById(elementId);
+      arrayDisplay.innerHTML = `<strong>${label}</strong><br>${array.join(', ')}`;
+    }
+    </script>
+</body>
+</html>

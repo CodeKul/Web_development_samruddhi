@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>LastIndexOf Method Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>LastIndexOf Method Example</h1>
+
+    <div>
+      <p>Colors:</p>
+      <pre id="array-display"></pre>
+    </div>
+
+    <button onclick="findLastIndexOf()">Find Last Index of Element</button>
+
+    <script>
+      let colors = ["Red", "Green", "Blue", "Yellow", "Green"];
+      function findLastIndexOf() {
+        const colorToFind = prompt("Enter a color to find:");
+        const lastIndex = colors.lastIndexOf(colorToFind);
+
+        if (lastIndex !== -1) {
+          alert(`${colorToFind} found at last index ${lastIndex}`);
+        } else {
+          alert(`${colorToFind} not found in the array`);
+        }
+
+        displayArray("array-display", "Colors:", colors);
+      }
+
+      function displayArray(elementId, label, array) {
+        const arrayDisplay = document.getElementById(elementId);
+        arrayDisplay.innerHTML = `<strong>${label}</strong><br>${array.join(
+          ", "
+        )}`;
+      }
+    </script>
+  </body>
+</html>

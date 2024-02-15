@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Add and Delete Tasks</title>
+</head>
+<body>
+
+    <h1>Add and Delete Tasks</h1>
+    <form id="taskForm">
+        <label for="task">Task:</label>
+        <input type="text" id="taskInput" name="task" required>
+        <button type="button" onclick="addTask()">Add Task</button>
+    </form>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        var tasks = [];
+        function addTask() {
+            var taskInput = document.getElementById('taskInput');
+            var task = taskInput.value;
+            tasks.push(task)
+            taskInput.value = '';
+
+        
+            updateTaskList();
+        }
+
+        function deleteTask(index) {
+            tasks.splice(index, 1);
+            updateTaskList();
+        }
+       
+        function updateTaskList() {
+            var taskList = document.getElementById('taskList');
+
+            var taskListHTML = '';
+           
+            for (var i = 0; i < tasks.length; i++) {
+                taskListHTML += '<li>' + tasks[i] + ' <button onclick="deleteTask(' + i + ')">Delete</button></li>';
+            }
+           
+
+            taskList.innerHTML = taskListHTML;
+           
+        }
+   
+         
+    </script>
+
+</body>
+</html>

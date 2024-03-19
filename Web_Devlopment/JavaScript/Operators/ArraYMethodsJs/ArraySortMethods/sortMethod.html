@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        const vehicles =[
+            {type:"bus",year:"1870"},
+            {type:"car",year:"1874"},
+            {type:"auto",year:"1980"}
+        ]
+        displayVehicles();
+
+        vehicles.sort(function(a,b){return a.year - b.year})
+        displayVehicles();
+
+        function displayVehicles(){
+            document.getElementById("demo").innerHTML =
+            vehicles[0].type + " " +    vehicles[0].year + "<br>" +
+            vehicles[1].type + " " +    vehicles[1].year + "<br>" +
+            vehicles[2].type + " " +    vehicles[2].year 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!-- The constructor method is a special method:
+
+It has to have the exact name "constructor"
+It is executed automatically when a new object is created
+It is used to initialize object properties -->
+<!-- If you do not define a constructor method, JavaScript will add an empty constructor method. -->
+
+<!-- Class methods are created with the same syntax as object methods.
+
+Use the keyword class to create a class.
+
+Always add a constructor() method.
+
+Then add any number of methods. -->
+
+<html>
+<body>
+<h1>JavaScript Classes</h1>
+<p>Creating two car objects from a car class:</p>
+
+<p id="demo"></p>
+
+<script>
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+}
+
+const myCar1 = new Car("Ford", 2014);
+const myCar2 = new Car("Audi", 2019);
+
+document.getElementById("demo").innerHTML =
+myCar1.name + " " + myCar2.name;
+
+</script>
+
+</body>
+</html>
+

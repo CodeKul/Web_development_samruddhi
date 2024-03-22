@@ -1,50 +1,108 @@
 <html>
 <head>
-    <title>Add and Delete Tasks</title>
+   <title>Add, Edit, and Delete Tasks</title>
 </head>
-<body>
-
-    <h1>Add and Delete Tasks</h1>
-    <form id="taskForm">
-        <label for="task">Task:</label>
-        <input type="text" id="taskInput" name="task" required>
-        <button type="button" onclick="addTask()">Add Task</button>
-    </form>
-
+<body>  
+    <style>
+        
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        input[type="text"] {
+            width: calc(100% - 85px);
+            padding: 8px;
+            margin-right: 5px;
+        }
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="container">
+        <input type="text" id="taskInput" placeholder="Enter task">
+        <button onclick="addTask()">Add Task</button>
+        <input type="text" id="searchInput" placeholder="Search task">
+        <button onclick="searchTasks()">Search</button>
+        <ul id="taskList"></ul>
+    </div>
+  
+   
     <ul id="taskList"></ul>
 
     <script>
         var tasks = [];
         function addTask() {
-            var taskInput = document.getElementById('taskInput');
-            var task = taskInput.value;
-            tasks.push(task)
-            taskInput.value = '';
+            var taskInput = document.getElementById("taskInput");
+             var task = taskInput.value.trim()
 
-        
-            updateTaskList();
+        if (task !== "") {
+            tasks.push(task); 
+            taskInput.value = ""; 
+            displayTasks(); 
+            updateTaskList()
         }
+    }
+        
 
         function deleteTask(index) {
             tasks.splice(index, 1);
             updateTaskList();
         }
-       
+        
+        function editTask(index) {
+            var editedTask = prompt("Edit task:", tasks[index]);
+            if (editedTask !== null) {
+                tasks[index] = editedTask;
+               updateTaskList()
+            }
+        }
+          
+        function searchTasks() {
+        var searchInput = document.getElementById("searchInput");
+        var query = searchInput.value.trim(); 
+
+        if (query !== "") {
+            var matchingTasks = tasks.filter(function(task) {
+                return task.toLowerCase().includes(query.toLowerCase()); 
+            });
+
+            displayTasks(matchingTasks); 
+        } else {
+            displayTasks(); 
+        }
+    }
+
+    function displayTasks(matchingTasks) {
+        var taskList = document.getElementById("taskList");
+        taskList.innerHTML = ""; 
+
+        if (!matchingTasks) {
+            matchingTasks = tasks; 
+        }
+
+        matchingTasks.forEach(function(task, index) {
+            var listItem = document.createElement("li");
+            listItem.textContent = task;
+            taskList.appendChild(listItem);
+        });
+    }
+
+
         function updateTaskList() {
             var taskList = document.getElementById('taskList');
 
             var taskListHTML = '';
-           
+
             for (var i = 0; i < tasks.length; i++) {
-                taskListHTML += '<li>' + tasks[i] + ' <button onclick="deleteTask(' + i + ')">Delete</button></li>';
+                taskListHTML += '<li>' + tasks[i] + ' <button onclick="editTask(' + i + ')">Edit</button> <button onclick="deleteTask(' + i + ')">Delete</button></li>';
             }
-           
 
             taskList.innerHTML = taskListHTML;
-           
         }
-   
-         
     </script>
 
 </body>

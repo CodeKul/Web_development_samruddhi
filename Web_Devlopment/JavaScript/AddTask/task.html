@@ -25,14 +25,15 @@
     <div class="container">
         <input type="text" id="taskInput" placeholder="Enter task">
         <button onclick="addTask()">Add Task</button>
-        <input type="text" id="searchInput" placeholder="Search task">
+        <input type="text" id="searchInput" placeholder="Search task" oninput="autoSuggest()">
         <button onclick="searchTasks()">Search</button>
+        <!-- <button onclick="searchTasks()">Search</button> -->
         <ul id="taskList"></ul>
     </div>
   
    
     <ul id="taskList"></ul>
-
+x   
     <script>
         var tasks = [];
         function addTask() {
@@ -90,7 +91,20 @@
             taskList.appendChild(listItem);
         });
     }
+    function autoSuggest() {
+            var searchInput = document.getElementById("searchInput");
+            var query = searchInput.value.trim();
 
+            if (query !== "") {
+                matchingTasks = tasks.filter(function(task) {
+                    return task.toLowerCase().startsWith(query.toLowerCase());
+                });
+
+                displayTasks(matchingTasks);
+            } else {
+                displayTasks();
+            }
+        }
 
         function updateTaskList() {
             var taskList = document.getElementById('taskList');

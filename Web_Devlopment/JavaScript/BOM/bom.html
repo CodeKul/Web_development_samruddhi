@@ -1,0 +1,32 @@
+<!-- The Browser Object Model (BOM) is a browser-specific convention referring to all the objects
+ exposed by the web browser. The BOM allows JavaScript to “interact with” the browser. 
+ The object of the window represents a browser window and all its corresponding features. 
+ A window object is created automatically by the browser itself. Java Script’s window.screen 
+ object contains information about the user’s screen. It can also be written without the window prefix. 
+
+
+Properties:
+
+screen.width
+screen.height
+screen.availWidth
+screen.availHeight
+screen.colorDepth
+screen.pixelDepth -->
+
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="height"></p>
+    <p id="Width"></p>
+
+    <script>
+      document.getElementById("Width").innerHTML =
+        " The Screen width is " + screen.width;
+      document.getElementById("height").innerHTML =
+        " The screen height is " + screen.height;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!-- Throttling sometimes also called throttle function is a practice used in websites.
+Throttling is used to call a function after every millisecond or a particular interval 
+of time only the first click is executed immediately -->
+
+<html>
+  <body>
+    <button id="nothrottle">Click Me</button>
+    <script>
+      const btn = document.querySelector("#nothrottle");
+
+      btn.addEventListener("click", () => {
+        console.log("button is clicked");
+      });
+    </script>
+  </body>
+</html>
